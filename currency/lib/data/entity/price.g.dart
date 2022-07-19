@@ -14,7 +14,7 @@ Price _$PriceFromJson(Map<String, dynamic> json) => Price(
       low: json['low'] as String,
       bid: json['bid'] as String,
       ask: json['ask'] as String,
-      timestamp: json['timestamp'] as String,
+      createDate: json['create_date'] as String,
     );
 
 Map<String, dynamic> _$PriceToJson(Price instance) => <String, dynamic>{
@@ -25,5 +25,5 @@ Map<String, dynamic> _$PriceToJson(Price instance) => <String, dynamic>{
       'low': instance.low,
       'bid': instance.bid,
       'ask': instance.ask,
-      'timestamp': instance.timestamp,
+      'create_date': instance.createDate,
     };

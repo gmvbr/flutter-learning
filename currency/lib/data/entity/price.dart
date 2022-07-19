@@ -11,7 +11,9 @@ class Price {
   final String low;
   final String bid;
   final String ask;
-  final String timestamp;
+
+  @JsonKey(name: "create_date")
+  final String createDate;
 
   const Price({
     required this.code,
@@ -21,7 +23,7 @@ class Price {
     required this.low,
     required this.bid,
     required this.ask,
-    required this.timestamp,
+    required this.createDate,
   });
 
   factory Price.fromJson(Map<String, dynamic> json) => _$PriceFromJson(json);
